@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./404.css";
-export default function PageNotFound() {
+import "./ErrorPage.css";
+export default function ErrorPage() {
   return (
     <section class="page_404">
       <div class="container">

@@ -1,22 +1,16 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./Component/navBar";
-import image1 from "./Images/1.jpg";
-import image2 from "./Images/2.jpg";
-import image3 from "./Images/3.png";
-
+import Home from "./Pages/Home";
+import ErrorPage from "./Pages/ErrorPage";
 function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar image={image3} />
         <Routes>
-          <Route path="/" exact />
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
-      <img className="image" src={image1} alt="" />
-
-      <img src={image2} alt="" />
     </div>
   );
 }
